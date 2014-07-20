@@ -1,0 +1,46 @@
+<head>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+<body>
+<div class="container-fluid">
+<div class="row">
+	<div class="col-md-6">
+		<input type="file" id="files" name="files[]" /><br />
+		<input id="p" type="password" class="input-md form-control" placeholder="Secret Key" />
+		
+		<button class="btn btn-success" id="decrypt"><span class="glyphicon glyphicon-ok"></span> Decrypt</button>
+		<button class="btn btn-default" id="download"><span class="glyphicon glyphicon-download"></span> Download</button>
+		<br />
+		<textarea rows="20" cols="50"></textarea><br />
+		<output id="list"></output><br />
+
+	</div>
+	
+	<div class="col-md-6">
+		<div class="col-md-6">
+			<video id="video" width="640" height="480" autoplay></video><br/>
+			<button id="snap" class="btn btn-default"><span class="glyphicon glyphicon-camera"></span> Snap Photo</button>
+		</div>
+		
+		<div class="col-md-6">
+			<canvas id="canvas" width="640" height="480"></canvas>
+		</div>
+	</div>
+
+</div>
+</div>
+</body>
+
+<style>
+	img, textarea { width:100% }
+	video, canvas { max-width:100%; }
+	input, .btn { margin-bottom:10px; }
+	body { padding-top:30px; }
+	
+</style>
+
+
+<script src="crypto.js"></script>
+<script src="encrypt.js"></script>
